@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+    <head>
+        <title>LAYOUT BASE</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- ICONO DE LA PAGINA (AGREGAR EL PROPIO)-->
+        <link rel="icon" type="image/png" th:href="@{/img/unknow.png}" />
+
+
+    </head>
+
+    <body>
+        <!-- CONTENIDO DE LA PAGINA -->
+        <section class="home-section">
+            <div class="home-content">
+                <i class='bx bx-menu botton-color'></i>
+                <span class="text">Menu</span>
+            </div>
+
+            <main>
+                <div class="contenido p-4" layout:fragment="contenido">
+                    <p>Contenido principal de las páginas</p>
+                </div>
+            </main>
+        </section>
+
+        <!-- FIN CONTENIDO DE LA PAGINA -->
+
+        <!--///////////////////////// SECCIÓN SCRIPT's ///////////////////-->
+        <!-- Mis JS (TODA CLASE QUE SE LLAME JS, SE REEMPLAZA ESA BARRA, SE PODRA AGREGAR ESTILOS PROPIOS DE LA PAGINA Y QUE VA HACER CARGADOR EN LA SIGUIENTE LINEA) -->
+        <script th:replace=":: js"></script>
+        <!--///////////////////////// FIN SECCIÓN SCRIPT's ///////////////////-->
+    </body>
+
+</html>
